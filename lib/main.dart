@@ -1,4 +1,6 @@
-import 'package:dominicsltns/home.dart';
+// import 'package:dominicsltns/home.dart';
+// import 'package:dominicsltns/homev.dart';
+import 'package:dominicsltns/homevw.dart';
 import 'package:flutter/cupertino.dart';
 
 void main() {
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       title: 'Dominic Sltns',
       theme: ctheme(),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: const HomePage(),
     );
   }
 }
