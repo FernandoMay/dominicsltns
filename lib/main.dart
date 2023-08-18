@@ -1,5 +1,6 @@
 // import 'package:dominicsltns/home.dart';
 // import 'package:dominicsltns/homev.dart';
+import 'package:dominicsltns/constants.dart';
 import 'package:dominicsltns/homevw.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -15,7 +16,17 @@ CupertinoThemeData ctheme() {
     primaryContrastingColor: Color(0xFFF1D4E5),
     brightness: Brightness.light,
     textTheme: CupertinoTextThemeData(
-      primaryColor: Color(0xFF080202),
+      primaryColor: Constants.goldColor,
+      navTitleTextStyle: TextStyle(
+        color: Constants.goldColor, // This is where you use the gold color
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      ),
+      textStyle: TextStyle(
+        color:
+            Constants.goldColor, // You can define a default text color as well
+        fontSize: 16,
+      ),
     ),
   );
 }

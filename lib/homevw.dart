@@ -1,3 +1,6 @@
+import 'package:dominicsltns/home.dart';
+import 'package:dominicsltns/homev.dart';
+import 'package:dominicsltns/homeview.dart';
 import 'package:dominicsltns/scetions.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -191,39 +194,47 @@ class ServicesScreen extends StatelessWidget {
         middle: Text('Our Services'),
       ),
       child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'Our Services',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'Our Services',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                'We offer a range of services to meet your technology needs. From mobile app development to web solutions, we have you covered.',
-                style: TextStyle(
-                  fontSize: 18,
+                const SizedBox(height: 20),
+                const Text(
+                  'We offer a range of services to meet your technology needs. From mobile app development to web solutions, we have you covered.',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 20),
-              const ServicesSection(),
-              CupertinoButton(
-                onPressed: () {
-                  // Navigate to a detailed service page
-                },
-                child: const Text(
-                  'Explore Services',
-                  style: TextStyle(fontSize: 18),
+                const SizedBox(height: 20),
+                const ServicesSection(),
+                CupertinoButton(
+                  onPressed: () {
+                    // Navigate to a detailed service page
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) => HomeV(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'Explore Services',
+                    style: TextStyle(fontSize: 18),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -266,6 +277,12 @@ class AboutScreen extends StatelessWidget {
               CupertinoButton(
                 onPressed: () {
                   // Navigate to more details about the company
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const Home(),
+                    ),
+                  );
                 },
                 child: const Text(
                   'Learn More',
@@ -315,6 +332,12 @@ class ContactScreen extends StatelessWidget {
               CupertinoButton(
                 onPressed: () {
                   // Open a contact form or email link
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const HomeView(),
+                    ),
+                  );
                 },
                 child: const Text(
                   'Get in Touch',

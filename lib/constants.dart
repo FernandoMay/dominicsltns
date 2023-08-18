@@ -18,6 +18,7 @@ class Constants {
   static const Color baseColor = Color(0xFF0E001F); // Azul oscuro
   static const Color blueColor = Color(0xFF0247E8); // Azul brillante
   static const Color sandColor = Color(0xFFFCECA3); // Color arena claro
+  static const Color goldColor = Color(0xFFDAA520); // Dorado suave
   static const Color whiteColor = Color(0xFFFFFFFF); // Blanco
 }
 

@@ -3,8 +3,10 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class HomeView extends StatelessWidget {
+class HomeV extends StatelessWidget {
   final List<String> categoryItems = ['Services', 'Products', 'Catalog'];
+
+  HomeV({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +63,7 @@ class HomeView extends StatelessWidget {
 class ServiceCard extends StatelessWidget {
   final String serviceTitle;
 
-  ServiceCard({required this.serviceTitle});
+  ServiceCard({super.key, required this.serviceTitle});
 
   @override
   Widget build(BuildContext context) {
